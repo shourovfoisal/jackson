@@ -25,7 +25,7 @@ public class NodeMethods {
             String jsonStr = mapper.writeValueAsString(node);
             System.out.println(jsonStr);
         } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
+            logger.log(Level.SEVERE, "Error occurred.", e);
         }
     }
 
